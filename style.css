@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+.container {
+    padding: 0 100px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+
+/* ========================================================================================
+                                     NAVIGATOR                                          
+======================================================================================== */
+
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding: 25px 0;
+    width: 100%;
+}
+
+nav .logo {
+    float: left;
+    cursor: pointer;
+}
+
+nav ul {
+    float: right;
+    padding-top: 5px;
+}
+
+nav ul li {
+    float: left;
+    margin-left: 20px;
+}
+
+nav.background {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: width .3s;
+}
+
+ul li a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+nav .hamburger-menu {
+    display: none;
+}
+
+
+/* ========================================================================================
+                                     HEADER                                         
+======================================================================================== */
+
+header {
+    background-image: url("images/desktop/image-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    padding-top: 250px;
+}
+
+header h1 {
+    padding: 5% 7%;
+    border: 2px solid white;
+    color: white;
+    letter-spacing: 5px;
+    font-weight: lighter;
+    font-size: 50px;
+    width: fit-content;
+    max-width: 52%;
+}
+
+
+/* ========================================================================================
+                                     ABOUT                                         
+======================================================================================== */
+
+.about-wrapper {
+    padding-top: 70px;
+}
+
+.image-wrapper {
+    margin-left: 0;
+    width: 60%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.about {
+    position: relative;
+    margin-top: -23%;
+    left: 40%;
+    width: 60%;
+    background-color: white;
+    padding: 7% 5%;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.about h1 {
+    font-weight: lighter;
+    font-size: 40px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.about p {
+    font-size: 17px;
+    opacity: 0.7;
+}
+
+
+/* ========================================================================================
+                                     CONTENT                                        
+======================================================================================== */
+
+.content-wrapper {
+    padding: 70px 0;
+}
+
+.content-wrapper h1 {
+    font-weight: lighter;
+    font-size: 40px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.contents {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.content {
+    width: 23%;
+    position: relative;
+    top: 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.desktop {
+    width: 100%;
+}
+
+.mobile {
+    display: none;
+}
+
+.content h2 {
+    font-weight: normal;
+    position: absolute;
+    left: 5%;
+    top: 75%;
+    color: white;
+    opacity: 0.8;
+    width: 60%;
+}
+
+.content:hover {
+    position: relative;
+    height: fit-content;
+    top: -20px;
+    box-shadow: 0 20px 10px 7px rgba(0, 0, 0, 0.3);
+}
+
+.content-wrapper span {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 35px;
+    border: 1px solid black;
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.content-wrapper span:hover {
+    color: white;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.content-wrapper span a {
+    color: black;
+}
+
+.content-wrapper span:hover a {
+    color: white;
+}
+
+
+/* ========================================================================================
+                                     FOOTER                                        
+======================================================================================== */
+
+footer {
+    background-color: black;
+    padding: 50px 0;
+}
+
+footer .menus {
+    float: left;
+}
+
+footer .menus ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+footer .menus img {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+footer .media-wrapper {
+    float: right;
+}
+
+footer .media {
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    height: 30px;
+}
+
+footer .media img {
+    cursor: pointer;
+}
+
+footer .media p {
+    font-size: 8px;
+    position: absolute;
+    top: 100%;
+    transition: all .5s;
+    transform: translateY(20px);
+    color: black;
+}
+
+footer .media:hover p {
+    display: block;
+    color: white;
+    transform: translateY(0);
+    transition-delay: .2s;
+}
+
+footer .attribution {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    clear: both;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 0.75em;
+}
